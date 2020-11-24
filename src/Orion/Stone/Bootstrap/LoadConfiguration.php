@@ -39,6 +39,7 @@ class LoadConfiguration
         // Eloquent ORM
         $capsule = new Capsule;
         $capsule->addConnection(require BASE_PATH.'/config/database.php');
+        $capsule->setAsGlobal();
         $capsule->bootEloquent();
 
         // View Loader
